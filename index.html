@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rezuan | Digital Service Hub</title>
+    <style>
+        :root { --rezuan-green: #00ff88; --bg: #0a0a0a; --card: #161616; }
+        
+        body { 
+            background: var(--bg); color: white; font-family: 'Segoe UI', sans-serif; 
+            margin: 0; padding: 0; display: flex; flex-direction: column; align-items: center;
+        }
+
+        header { 
+            width: 100%; padding: 40px 0; text-align: center; 
+            background: linear-gradient(to bottom, #111, var(--bg));
+            border-bottom: 1px solid #333;
+        }
+
+        h1 { color: var(--rezuan-green); margin: 0; font-size: 28px; letter-spacing: 3px; }
+        p { color: #888; margin-top: 10px; }
+
+        /* The Responsive Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px; width: 90%; max-width: 1000px; margin: 40px 0;
+        }
+
+        /* Individual Service Card */
+        .service-card {
+            background: var(--card); border: 1px solid #333; border-radius: 20px;
+            padding: 25px; text-align: center; transition: 0.3s;
+            display: flex; flex-direction: column; justify-content: space-between;
+        }
+
+        .service-card:hover { 
+            border-color: var(--rezuan-green); 
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0, 255, 136, 0.1);
+        }
+
+        .icon { font-size: 40px; margin-bottom: 15px; }
+        h3 { margin: 10px 0; font-size: 20px; }
+        .desc { color: #aaa; font-size: 14px; margin-bottom: 20px; line-height: 1.5; }
+
+        .launch-btn {
+            background: var(--rezuan-green); color: black;
+            text-decoration: none; padding: 12px; border-radius: 10px;
+            font-weight: bold; text-transform: uppercase; font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>REZUAN HASSAN</h1>
+        <p>CSE Student @ DIU | Pro Gamer | AI Developer</p>
+    </header>
+
+    <div class="services-grid">
+        
+        <div class="service-card">
+            <div class="icon">📸</div>
+            <h3>AI Photo Enhancer</h3>
+            <p class="desc">Professional edge-computing AI to sharpen and enhance your images instantly.</p>
+            <a href="https://rezuan-hassan.github.io/Photo-Enhanced-By-Rezuan/" class="launch-btn">Open Service</a>
+        </div>
+
+        <div class="service-card">
+            <div class="icon">🚢</div>
+            <h3>Ship Battle P2P</h3>
+            <p class="desc">Real-time multiplayer naval warfare. Connect with friends and battle.</p>
+            <a href="https://rezuan-hassan.github.io/Rezuan-Tournament/" class="launch-btn">Play Game</a>
+        </div>
+
+        <div class="service-card">
+            <div class="icon">🏆</div>
+            <h3>Esports Manager</h3>
+            <p class="desc">A tool built with C logic to manage gaming tournament brackets and scores.</p>
+            <a href="https://rezuan-hassan.github.io/Rezuan-Tournament/" class="launch-btn">Manage Match</a>
+        </div>
+
+    </div>
+
+    <footer style="margin-bottom: 40px; color: #444; font-size: 12px;">
+        &copy; 2026 Rezuan Hassan. All Rights Reserved.
+    </footer>
+
+</body>
+</html>
