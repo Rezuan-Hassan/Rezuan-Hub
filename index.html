@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rezuan | Digital Service Hub</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
             --rezuan-green: #00ff88;
@@ -15,7 +16,7 @@
         body {
             background: var(--bg);
             color: white;
-            font-family: 'Segoe UI', sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
             display: flex;
@@ -25,79 +26,104 @@
 
         header {
             width: 100%;
-            padding: 40px 0;
+            padding: 60px 0;
             text-align: center;
             background: linear-gradient(to bottom, #111, var(--bg));
-            border-bottom: 1px solid #333;
+            border-bottom: 1px solid #222;
         }
 
         h1 {
             color: var(--rezuan-green);
             margin: 0;
-            font-size: 28px;
-            letter-spacing: 3px;
+            font-size: 32px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            text-shadow: 0 0 10px rgba(0, 255, 136, 0.3);
         }
 
-        p {
+        .subtitle {
             color: #888;
-            margin-top: 10px;
+            margin-top: 15px;
+            font-size: 14px;
+            letter-spacing: 1px;
         }
 
         /* The Responsive Grid */
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
+            gap: 25px;
             width: 90%;
-            max-width: 1000px;
-            margin: 40px 0;
+            max-width: 1100px;
+            margin: 50px 0;
         }
 
         /* Individual Service Card */
         .service-card {
             background: var(--card);
-            border: 1px solid #333;
-            border-radius: 20px;
-            padding: 25px;
+            border: 1px solid #222;
+            border-radius: 24px;
+            padding: 30px;
             text-align: center;
-            transition: 0.3s;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            position: relative;
+            overflow: hidden;
         }
 
         .service-card:hover {
             border-color: var(--rezuan-green);
-            transform: translateY(-10px);
-            box-shadow: 0 10px 30px rgba(0, 255, 136, 0.1);
+            transform: translateY(-12px);
+            box-shadow: 0 15px 40px rgba(0, 255, 136, 0.15);
         }
 
         .icon {
-            font-size: 40px;
-            margin-bottom: 15px;
+            font-size: 45px;
+            margin-bottom: 20px;
+            color: var(--rezuan-green);
+            display: block;
         }
 
         h3 {
             margin: 10px 0;
-            font-size: 20px;
+            font-size: 22px;
+            color: #fff;
         }
 
         .desc {
-            color: #aaa;
+            color: #999;
             font-size: 14px;
-            margin-bottom: 20px;
-            line-height: 1.5;
+            margin-bottom: 25px;
+            line-height: 1.6;
+            flex-grow: 1;
         }
 
         .launch-btn {
             background: var(--rezuan-green);
             color: black;
             text-decoration: none;
-            padding: 12px;
-            border-radius: 10px;
-            font-weight: bold;
+            padding: 14px;
+            border-radius: 12px;
+            font-weight: 800;
             text-transform: uppercase;
+            font-size: 11px;
+            letter-spacing: 1px;
+            transition: 0.3s;
+        }
+
+        .launch-btn:hover {
+            background: #fff;
+            transform: scale(1.05);
+        }
+
+        footer {
+            margin-top: auto;
+            padding: 40px;
+            color: #444;
             font-size: 12px;
+            letter-spacing: 1px;
         }
     </style>
 </head>
@@ -106,43 +132,50 @@
 
     <header>
         <h1>REZUAN HASSAN</h1>
-        <p>CSE Student @ DIU | Pro Gamer | AI Developer</p>
+        <p class="subtitle">CSE Student @ DIU | Pro Gamer | AI Developer</p>
     </header>
 
     <div class="services-grid">
 
         <div class="service-card">
-            <div class="icon">📸</div>
+            <div class="icon"><i class="fas fa-calculator"></i></div>
+            <h3>Rezuan Calculator</h3>
+            <p class="desc">Pro-grade Scientific & Engineering suite with neon glow, base conversion (BIN/HEX), and degree logic.</p>
+            <a href="https://rezuan-hassan.github.io/Rezuan-Calculator/" class="launch-btn">Open Calculator</a>
+        </div>
+
+        <div class="service-card">
+            <div class="icon"><i class="fas fa-wand-magic-sparkles"></i></div>
             <h3>AI Photo Enhancer</h3>
-            <p class="desc">Professional edge-computing AI to sharpen and enhance your images instantly.</p>
+            <p class="desc">Professional edge-computing AI to sharpen and enhance your images instantly with high precision.</p>
             <a href="https://rezuan-hassan.github.io/Photo-Enhanced-By-Rezuan/" class="launch-btn">Open Service</a>
         </div>
 
         <div class="service-card">
-            <div class="icon">🚢</div>
+            <div class="icon"><i class="fas fa-ship"></i></div>
             <h3>Ship Battle P2P</h3>
-            <p class="desc">Real-time multiplayer naval warfare. Connect with friends and battle.</p>
+            <p class="desc">Real-time multiplayer naval warfare. Connect with friends via P2P and dominate the seas.</p>
             <a href="https://rezuan-hassan.github.io/Ship-Battle-Rezuan/" class="launch-btn">Play Game</a>
         </div>
 
         <div class="service-card">
-            <div class="icon">🌿</div>
+            <div class="icon"><i class="fas fa-leaf"></i></div>
             <h3>Nature Defender</h3>
             <p class="desc">An action-packed survival game where you protect the ecosystem from mechanical invaders.</p>
             <a href="https://rezuan-hassan.github.io/Nature-Defender/" class="launch-btn">Play Now</a>
         </div>
 
         <div class="service-card">
-            <div class="icon">🏆</div>
+            <div class="icon"><i class="fas fa-trophy"></i></div>
             <h3>Esports Manager</h3>
-            <p class="desc">A tool built with C logic to manage gaming tournament brackets and scores.</p>
+            <p class="desc">A management tool built with high-level logic to handle tournament brackets and live scores.</p>
             <a href="https://rezuan-hassan.github.io/Rezuan-Tournament/" class="launch-btn">Manage Match</a>
         </div>
 
     </div>
 
-    <footer style="margin-bottom: 40px; color: #444; font-size: 12px;">
-        &copy; 2026 Rezuan Hassan. All Rights Reserved.
+    <footer>
+        &copy; 2026 REZUAN HASSAN. ALL RIGHTS RESERVED.
     </footer>
 
 </body>
